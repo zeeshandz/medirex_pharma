@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: medirex-pharma
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: node .output/server/index.mjs
+    envVars:
+      - key: NODE_VERSION
+        value: 20.14.0
+      - key: NITRO_PRESET
+        value: render-com
